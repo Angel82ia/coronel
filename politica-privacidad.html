@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de privacidad - Pedro Baños</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="assets/img/logo-estrellas.svg">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <a href="/" class="logo">
+                <img src="assets/img/logo-estrellas.svg" class="logo-estrellas" alt="Logo">
+                <span class="logo-text">Pedro Baños · Geoestratego</span>
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/#inicio">Inicio</a></li>
+                    <li><a href="/#podcast">Podcast</a></li>
+                    <li><a href="/#libros">Libros</a></li>
+                    <li><a href="/#eventos">Eventos</a></li>
+                    <li><a href="/#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container" style="padding-top: 120px; padding-bottom: 80px; max-width: 800px;">
+        <h1>Política de privacidad</h1>
+        <div id="contenidoLegal"></div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="assets/img/logo-estrellas.svg" width="40">
+                <span>Pedro Baños · Geoestratego</span>
+            </div>
+            <p class="footer-copy">© 2025</p>
+        </div>
+    </footer>
+    <script>
+        fetch('content/legal/politica-privacidad.md')
+            .then(res => res.text())
+            .then(text => {
+                const html = text.replace(/^# (.*)/gm, '<h1>$1</h1>')
+                                 .replace(/^## (.*)/gm, '<h2>$1</h2>')
+                                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                 .replace(/\n/g, '<br>');
+                document.getElementById('contenidoLegal').innerHTML = html;
+            });
+    </script>
+</body>
+</html>

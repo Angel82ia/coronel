@@ -10,3 +10,40 @@ body{background:var(--bg-dark);color:#fff;font-family:sans-serif}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .btn-primary{background:var(--accent-gold);color:#000;padding:12px 28px;border-radius:40px;text-decoration:none}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+/* Cookie banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 15, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-gold);
+    padding: 16px 20px;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+}
+.cookie-content {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.cookie-content p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+.cookie-buttons {
+    display: flex;
+    gap: 12px;
+}
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

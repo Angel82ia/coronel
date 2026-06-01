@@ -49,7 +49,47 @@
         <section id="eventos"><div class="container"><div class="section-header"><div class="overline">Próximas conferencias</div><h2>Agenda</h2></div><div id="eventosContainer"></div></div></section>
         <section id="contacto"><div class="container"><div class="section-header"><div class="overline">Contacto</div><h2>Hablemos</h2></div><div class="contact-grid"><div class="contact-form"><form id="contactForm"><input type="text" placeholder="Nombre"><input type="email" placeholder="Email"><textarea rows="4" placeholder="Mensaje"></textarea><button type="submit" class="btn-primary">Enviar</button></form></div><div><div id="socialLinks"></div><p id="emailContacto"></p></div></div></div></section>
     </main>
-    <footer class="footer"><div class="container"><div class="footer-logo"><img src="assets/img/logo-estrellas.svg" width="40"><span>Pedro Baños · Geoestratego</span></div><p class="footer-copy">© 2025</p></div></footer>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="assets/img/logo-estrellas.svg" width="40">
+                <span>Pedro Baños · Geoestratego</span>
+            </div>
+            <div class="footer-links-legales" style="margin: 16px 0; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="aviso-legal.html" style="color: #9AA7B9; text-decoration: none;">Aviso legal</a>
+                <a href="politica-privacidad.html" style="color: #9AA7B9; text-decoration: none;">Política de privacidad</a>
+                <a href="politica-cookies.html" style="color: #9AA7B9; text-decoration: none;">Política de cookies</a>
+            </div>
+            <p class="footer-copy">© 2025 · Todos los derechos reservados</p>
+        </div>
+    </footer>
     <script src="js/script.js"></script>
+
+<!-- Cookie banner -->
+<div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+        <p>🍪 Este sitio web utiliza cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico. Puedes aceptar o rechazar su uso. <a href="politica-cookies.html" style="color: var(--accent-gold);">Más información</a></p>
+        <div class="cookie-buttons">
+            <button id="acceptCookies" class="btn-primary">Aceptar</button>
+            <button id="rejectCookies" class="btn-outline">Rechazar</button>
+        </div>
+    </div>
+</div>
+<script>
+    // Comprobar si ya se ha elegido
+    if (!localStorage.getItem('cookiesAccepted') && !localStorage.getItem('cookiesRejected')) {
+        document.getElementById('cookieBanner').style.display = 'flex';
+    }
+    document.getElementById('acceptCookies').onclick = () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookieBanner').style.display = 'none';
+        // Aquí se pueden cargar scripts de terceros (Google Analytics, etc.)
+    };
+    document.getElementById('rejectCookies').onclick = () => {
+        localStorage.setItem('cookiesRejected', 'true');
+        document.getElementById('cookieBanner').style.display = 'none';
+    };
+</script>
 </body>
 </html>
+
