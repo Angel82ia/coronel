@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pedro Baños · Geoestratego | Geopolitics & strategic analysis</title>
+    <meta name="description" content="Official website of Colonel Pedro Baños. Geopolitical analyst, speaker, author of 'Así se domina el mundo' and 'El dominio mundial'.">
+    <meta name="keywords" content="Pedro Baños, geostrategy, geopolitics, books, conferences, podcast, world domination">
+    <meta name="author" content="Pedro Baños">
+    <meta property="og:title" content="Pedro Baños · Geoestratego">
+    <meta property="og:description" content="Geopolitical analysis, books and podcast of Colonel Pedro Baños.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geoestratego.com/en/">
+    <meta property="og:image" content="https://geoestratego.com/assets/img/og-image.jpg">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/logo-estrellas.svg">
+    <link rel="alternate icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-flex">
+            <a href="../#inicio" class="logo">
+                <img src="../assets/img/logo-estrellas.svg" alt="Three stars - Colonel Pedro Baños" class="logo-estrellas">
+                <span class="logo-text">Pedro Baños · Geoestratego</span>
+            </a>
+            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../#inicio">Home</a></li>
+                    <li><a href="../#podcast">Podcast</a></li>
+                    <li><a href="../#libros">Books</a></li>
+                    <li><a href="../#eventos">Events</a></li>
+                    <li><a href="../#contacto">Contact</a></li>
+                    <li class="idioma"><a href="../index.html">ES</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="hero-badge">★ ★ ★ Colonel (Ret.) Pedro Baños</div>
+                    <h1>Geopolitics to <span class="hero-title-accent">anticipate the future</span></h1>
+                    <p class="hero-description">Analyst, speaker and bestselling author. Specialist in geostrategy, world domination and asymmetric warfare.</p>
+                    <div class="hero-buttons">
+                        <a href="../#podcast" class="btn-primary">🎧 Listen to the latest podcast</a>
+                        <a href="../#libros" class="btn-outline">📖 Explore books</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="../assets/img/perfil.jpg" alt="Pedro Baños">
+                </div>
+            </div>
+        </section>
+
+        <section id="podcast">
+            <div class="container">
+                <div class="section-header">
+                    <div class="overline">Latest episode</div>
+                    <h2>The Colonel's Channel</h2>
+                </div>
+                <div class="featured-podcast" id="podcastContainer"></div>
+            </div>
+        </section>
+
+        <section id="libros">
+            <div class="container">
+                <div class="section-header">
+                    <div class="overline">Bibliography</div>
+                    <h2>Works by Colonel Baños</h2>
+                </div>
+                <div class="cards-grid" id="librosContainer"></div>
+            </div>
+        </section>
+
+        <section id="eventos">
+            <div class="container">
+                <div class="section-header">
+                    <div class="overline">Upcoming conferences</div>
+                    <h2>Public agenda</h2>
+                </div>
+                <div id="eventosContainer"></div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="container">
+                <div class="section-header">
+                    <div class="overline">Professional contact</div>
+                    <h2>Let's talk</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <form id="contactForm" action="#" method="post">
+                            <input type="text" name="nombre" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="mensaje" rows="4" placeholder="Message / speaking request" required></textarea>
+                            <button type="submit" class="btn-primary">Send message</button>
+                            <p class="form-mensaje" style="display:none;">✅ Message sent successfully.</p>
+                        </form>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px;">Follow Pedro Baños</h3>
+                        <div class="social-links" id="socialLinks"></div>
+                        <p id="emailContacto"></p>
+                        <p style="margin-top: 20px;">For conference invitations, press or collaborations, use the form or direct email.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="../assets/img/logo-estrellas.svg" alt="★ ★ ★" width="40">
+                <span>Pedro Baños · Geoestratego</span>
+            </div>
+            <div class="footer-links-legales" style="margin: 16px 0; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="../aviso-legal.html" style="color: #9AA7B9; text-decoration: none;">Legal notice</a>
+                <a href="../politica-privacidad.html" style="color: #9AA7B9; text-decoration: none;">Privacy policy</a>
+                <a href="../politica-cookies.html" style="color: #9AA7B9; text-decoration: none;">Cookie policy</a>
+            </div>
+            <p class="footer-copy">© 2025 · All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <!-- Cookie banner (same as Spanish) -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>🍪 This website uses own and third-party cookies to improve your experience and analyze traffic. You can accept or reject their use. <a href="../politica-cookies.html" style="color: var(--accent-gold);">More info</a></p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn-primary">Accept</button>
+                <button id="rejectCookies" class="btn-outline">Reject</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Cookie banner logic (same as Spanish)
+        if (!localStorage.getItem('cookiesAccepted') && !localStorage.getItem('cookiesRejected')) {
+            document.getElementById('cookieBanner').style.display = 'flex';
+        }
+        document.getElementById('acceptCookies').onclick = () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieBanner').style.display = 'none';
+        };
+        document.getElementById('rejectCookies').onclick = () => {
+            localStorage.setItem('cookiesRejected', 'true');
+            document.getElementById('cookieBanner').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
